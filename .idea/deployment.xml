@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="pathways-consulting.net">
+    <serverData>
+      <paths name="ftp.spoint.ro">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="pathways-consulting.net">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/dev.pathways-consulting.net" />
+            <excludedPath path="/.subaccounts" />
+            <excludedPath path="/.spamassassin" />
+            <excludedPath path="/.softaculous" />
+            <excludedPath path="/.razor" />
+            <excludedPath path="/.htpasswds" />
+            <excludedPath path="/.cphorde" />
+            <excludedPath path="/.cpanel" />
+            <excludedPath path="/.cl.selector" />
+            <excludedPath path="/.cagefs" />
+            <excludedPath path="/.trash" />
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/atelieruldeconfectii.com" />
+            <excludedPath path="/mail" />
+            <excludedPath path="/old" />
+            <excludedPath path="/etc" />
+            <excludedPath path="/ssl" />
+            <excludedPath path="/tmp" />
+            <excludedPath path="/public_ftp" />
+            <excludedPath local="true" path="$PROJECT_DIR$/dev.pathways-consulting.net" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.subaccounts" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.spamassassin" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.softaculous" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.razor" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.htpasswds" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.cphorde" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.cpanel" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.cl.selector" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.cagefs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.trash" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.well-known" />
+            <excludedPath local="true" path="$PROJECT_DIR$/atelieruldeconfectii.com" />
+            <excludedPath local="true" path="$PROJECT_DIR$/mail" />
+            <excludedPath local="true" path="$PROJECT_DIR$/old" />
+            <excludedPath local="true" path="$PROJECT_DIR$/etc" />
+            <excludedPath local="true" path="$PROJECT_DIR$/ssl" />
+            <excludedPath local="true" path="$PROJECT_DIR$/tmp" />
+            <excludedPath local="true" path="$PROJECT_DIR$/public_ftp" />
+            <excludedPath path="/pathways.zip" />
+            <excludedPath path="/access-logs" />
+            <excludedPath path="/www" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>
