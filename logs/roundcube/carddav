@@ -1,0 +1,45 @@
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0000-dbinit
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 7 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0000-sample
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 1 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0001-categories
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 1 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0002-increasetextfieldlengths
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 7 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0003-fixtimestampdefaultvalue
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 1 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0004-fixtimestampdefaultvalue
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 1 matches
+[25-Feb-2020 15:15:49 +0200]: <931b230a> In migration: 0005-changemysqlut8toutf8mb4
+[25-Feb-2020 15:15:49 +0200]: <931b230a> Found 1 matches
+[02-Mar-2020 12:39:12 +0200]: <30c0abe2> Can't find migration: /dbinit/sqlite3.sql
+[05-Mar-2020 13:20:41 +0200]: <1a4982b4> Can't find migration: /dbinit/sqlite3.sql
+[10-Mar-2020 14:43:33 +0200]: <3d3546eb> Can't find migration: /dbinit/sqlite3.sql
+[20-Mar-2020 16:38:30 +0200]: <828f784a> In migration: 0000-dbinit
+[20-Mar-2020 16:38:30 +0200]: <828f784a> Found 7 matches
+[20-Mar-2020 16:38:30 +0200]: <828f784a> In migration: 0000-sample
+[20-Mar-2020 16:38:30 +0200]: <828f784a> Found 1 matches
+[20-Mar-2020 16:38:30 +0200]: <828f784a> In migration: 0001-categories
+[20-Mar-2020 16:38:30 +0200]: <828f784a> Found 1 matches
+[20-Mar-2020 16:38:30 +0200]: <828f784a> In migration: 0002-increasetextfieldlengths
+[20-Mar-2020 16:38:30 +0200]: <828f784a> Found 7 matches
+[20-Mar-2020 16:38:31 +0200]: <828f784a> In migration: 0003-fixtimestampdefaultvalue
+[20-Mar-2020 16:38:31 +0200]: <828f784a> Found 1 matches
+[20-Mar-2020 16:38:31 +0200]: <828f784a> In migration: 0004-fixtimestampdefaultvalue
+[20-Mar-2020 16:38:31 +0200]: <828f784a> Found 1 matches
+[20-Mar-2020 16:38:31 +0200]: <828f784a> In migration: 0005-changemysqlut8toutf8mb4
+[20-Mar-2020 16:38:31 +0200]: <828f784a> Found 1 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0000-dbinit
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 7 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0000-sample
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 1 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0001-categories
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 1 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0002-increasetextfieldlengths
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 7 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0003-fixtimestampdefaultvalue
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 1 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0004-fixtimestampdefaultvalue
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 1 matches
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> In migration: 0005-changemysqlut8toutf8mb4
+[20-Mar-2020 16:43:23 +0200]: <e1659d46> Found 1 matches

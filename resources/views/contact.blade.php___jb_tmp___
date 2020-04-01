@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    @include('partials.header')
+
+</head>
+<body>
+
+<!--Wrapper Content Start-->
+<div class="tnit-wrapper">
+
+    <!--Popup Overlay Outer Start-->
+    <div class="tnit-popup-outer">
+        <!-- Modal Box Start-->
+        <div class="modal fade tnit-modal-outer" id="tnit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="top">
+                            <h5 class="modal-title"><a href="#">New to site?</a> Creat an Account</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <h3>Register</h3>
+                    </div>
+                    <div class="modal-body">
+                        <!--Modal Form Start-->
+                        <form method="get" class="tnit-modal-form">
+                            <div class="inner-holder">
+                                <label>Username</label>
+                                <input type="text">
+                            </div>
+                            <div class="inner-holder">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                            <div class="inner-holder">
+                                <label>Password</label>
+                                <input type="password">
+                            </div>
+                            <div class="inner-holder">
+                                <button class="btn-register" type="submit">Register</button>
+                            </div>
+                        </form><!--Modal Form End-->
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- Modal Box End-->
+    </div><!--Popup Overlay Outer End-->
+
+    @include('partials.menu')
+
+
+    <!--Inner Banner Content Start-->
+    <div class="tnit-inner-banner tnit-banner-image_v2">
+        <div class="container">
+            <h2>{{$helper::getTextValue($texts, 'CONTACT_TITLE')}}</h2>
+            <!--BreadCrumb Listed Start-->
+            <ul class="breadcrumb tnit-breadcrumb-holder">
+                <li class="breadcrumb-item"><a href="./{{($languageCode == 'ro') ? '' : 'home' }}">{{$helper::getTextValue($texts, 'BREADCRUMB_HOME')}}</a></li>
+                <li class="breadcrumb-item active">{{$helper::getTextValue($texts, 'CONTACT_TITLE')}}</li>
+            </ul><!--BreadCrumb Listed End-->
+        </div>
+    </div><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="tnit-main-content">
+        <!--Contact Section Start-->
+        <section class="tnit-contact-section pd-tb70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <!--Leave Review Outer Start-->
+                        <div class="tl-review-outer">
+                            <h3>{{$helper::getTextValue($texts, 'CONTACT_FORM_TITLE')}}</h3>
+                            <!--Review Form Start-->
+                            <form id="contactForm" onsubmit="sendContact(event)" method="post" class="tl-review-form">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <label>{{$helper::getTextValue($texts, 'CONTACT_FORM_FULL_NAME')}} <i class="fa fa-star" aria-hidden="true"></i></label>
+                                            <input name="name" type="text">
+                                        </div><!--Inner Holder End-->
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <label>{{$helper::getTextValue($texts, 'CONTACT_FORM_EMAIL')}} <i class="fa fa-star" aria-hidden="true"></i></label>
+                                            <input name="email" type="email">
+                                        </div><!--Inner Holder End-->
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <label>{{$helper::getTextValue($texts, 'CONTACT_FORM_PHONE')}} </label>
+                                            <input name="phone" type="tel">
+                                        </div><!--Inner Holder End-->
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <label>{{$helper::getTextValue($texts, 'CONTACT_FORM_SUBJECT')}} <i class="fa fa-star" aria-hidden="true"></i></label>
+                                            <input name="subject" type="text">
+                                        </div><!--Inner Holder End-->
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <label>{{$helper::getTextValue($texts, 'CONTACT_FORM_MESSAGE')}} </label>
+                                            <textarea name="message" id="messageContact">{{$message}}</textarea>
+                                        </div><!--Inner Holder End-->
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!--Inner Holder Start-->
+                                        <div class="inner-holder">
+                                            <button class="btn-submit" type="submit">{{$helper::getTextValue($texts, 'CONTACT_FORM_SUBMIT')}}</button>
+                                        </div><!--Inner Holder End-->
+                                    </div>
+                                </div>
+                            </form>
+                            <script type="text/javascript">
+                                function sendContact(event) {
+                                    console.log($('#contactForm').serialize());
+                                    $.post('api/contact', $('#contactForm').serialize()).done(function(response){
+                                        alert("{{($languageCode == 'ro') ? 'Va vom contacta in curand!' : 'We will contact you soon!'}}" );
+                                        $("#contactForm")[0].reset();
+                                        $("#messageContact").val('');
+                                    });
+                                    event.preventDefault();
+                                }
+                            </script>
+                            <!--Review Form End-->
+
+                        </div><!--Leave Review Outer End-->
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <!--Sidebar Outer Start-->
+                        <aside class="tnit-sidebar-outer tnit-sidebar-outer_v2">
+                            <div class="widget widget-contact">
+                                <h3>{{$helper::getTextValue($texts, 'CONTACT_DETAILS_TITLE')}}</h3>
+                                <p style="text-align: center">{!! $helper::getTextValue($texts, 'CONTACT_DETAILS_TEXT') !!}</p>
+                                <ul class="about-info-listed about-info-listed_v2">
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <p style="padding-left: 46px; margin-bottom: 0px;font-size: 14px;">{{$helper::getTextValue($texts, 'HEADER_MAIN_ADDRESS')}}</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        {{$helper::getTextValue($texts, 'HEADER_ADDRESS')}}
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <a href="tel:{{$helper::getTextValue($texts, 'HEADER_PHONE')}}">{{$helper::getTextValue($texts, 'HEADER_PHONE')}}</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <a href="mailto:{{$helper::getTextValue($texts, 'HEADER_EMAIL')}}">{{$helper::getTextValue($texts, 'HEADER_EMAIL')}}</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-skype" aria-hidden="true"></i>
+                                        <a href="tel:{{$helper::getTextValue($texts, 'HEADER_SKYPE')}}">{{$helper::getTextValue($texts, 'HEADER_SKYPE')}}</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                        <a href="{{$helper::getTextValue($texts, 'HEADER_URL')}}">{{$helper::getTextValue($texts, 'HEADER_URL')}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section><!--Contact Section End-->
+
+        <!--Map Section Start-->
+        <section class="tnit-map-section">
+            <div id="tnit-map"></div>
+        </section><!--Map Section End-->
+
+    </div><!--Main Content End-->
+
+
+    @include('partials.footer')
+
+</div><!--Wrapper Content End-->
+
+<!--JQuery Files Start-->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+<script src="js/video-player.js"></script>
+<script src="js/jquery.circliful.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPf96eskAPXvkyDLPyYhxSCAKIziCUG_E"></script>
+<script src="js/map.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
